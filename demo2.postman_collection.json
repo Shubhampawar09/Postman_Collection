@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "a150bc29-b002-47bb-a31c-c42ecca3ca83",
+		"name": "demo2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Read all airlines details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/airlines",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"airlines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create airline data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"trips\": 150,\r\n    \"airline\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/passenger",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"passenger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read passenger by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/passenger",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"passenger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update the passenger details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Deepak kadam\",\r\n    \"trips\": 500,\r\n    \"airline\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/passenger/620b34169002d4bc5c4510f0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"passenger",
+						"620b34169002d4bc5c4510f0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
